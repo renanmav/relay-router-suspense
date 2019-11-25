@@ -6,7 +6,9 @@
   "types": "build/index.d.ts",
   "scripts": {
     "build": "rm -rf build && tsc",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "test": "npm run type-check",
+    "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
     "history": "^4.10.1",
@@ -25,6 +27,8 @@
     "@typescript-eslint/parser": "^2.8.0",
     "eslint": "^6.7.1",
     "eslint-plugin-import": "^2.18.2",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.4.3",
     "prettier": "^1.19.1",
     "tsc": "^1.20150623.0",
     "typescript": "^3.7.2"
@@ -40,5 +44,17 @@
     "semi": false,
     "singleQuote": true,
     "trailingComma": "all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx}": [
+      "yarn prettier --write",
+      "yarn lint",
+      "git add"
+    ]
   }
 }
