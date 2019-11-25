@@ -6,6 +6,7 @@ import {
   RouteRenderer,
 } from 'relay-router-suspense'
 import { RelayEnvironmentProvider } from 'react-relay/hooks'
+import './index.css'
 
 import RelayEnvironment from './RelayEnvironment'
 import routes from './routes'
