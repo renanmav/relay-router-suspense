@@ -14,7 +14,7 @@ interface RouterRendererProps {
   transitionConfig: React.SuspenseConfig
 }
 
-const RouterRenderer: React.FC<RouterRendererProps> = ({
+const RouteRenderer: React.FC<RouterRendererProps> = ({
   LoadingComponent,
   transitionConfig,
 }) => {
@@ -117,7 +117,7 @@ const RouterRenderer: React.FC<RouterRendererProps> = ({
   )
 }
 
-export default RouterRenderer
+export default RouteRenderer
 
 /**
  * The `component` property from the route entry is a Resource, which may or may not be ready.

@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
-    "build": "rm -rf build && tsc"
+    "build": "rm -rf build && tsc",
+    "prepublish": "tsc"
   },
   "dependencies": {
     "history": "^4.10.1",
