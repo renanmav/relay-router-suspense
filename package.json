@@ -1,7 +1,6 @@
 {
   "name": "relay-router-suspense",
   "version": "1.0.0",
-  "private": true,
   "license": "MIT",
   "main": "build/index.js",
   "types": "build/index.d.ts",

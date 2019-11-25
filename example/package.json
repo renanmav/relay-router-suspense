@@ -6,13 +6,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "relay": "yarn run relay-compiler --schema schema/schema.graphql --src ./src/ $@ --language typescript",
+    "update-schema": "yarn get-graphql-schema -h \"Authorization=bearer $REACT_APP_GITHUB_AUTH_TOKEN\" https://api.github.com/graphql > schema/schema.graphql"
   },
   "dependencies": {
     "react": "^0.0.0-experimental-b53ea6ca0",
     "react-dom": "^0.0.0-experimental-b53ea6ca0",
     "react-relay": "^0.0.0-experimental-a1a40b68",
     "react-scripts": "3.2.0",
+    "relay-router-suspense": "file:.yalc/relay-router-suspense",
     "relay-runtime": "^7.1.0"
   },
   "devDependencies": {
@@ -22,6 +25,9 @@
     "@types/react-relay": "^7.0.3",
     "@types/relay-runtime": "^6.0.11",
     "babel-plugin-relay": "^7.1.0",
+    "get-graphql-schema": "^2.1.2",
+    "relay-compiler": "^7.1.0",
+    "relay-compiler-language-typescript": "^10.1.1",
     "typescript": "3.7.2"
   },
   "browserslist": {
