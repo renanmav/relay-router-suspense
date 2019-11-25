@@ -31,6 +31,8 @@ createRouter(
 For example:
 
 ```ts
+import { RouteConfig, createRouter } from 'relay-router-suspense'
+
 const routes: RouteConfig[] = [
   {
     path: '/',
@@ -45,4 +47,6 @@ const routes: RouteConfig[] = [
     }),
   }
 ]
+
+const router = createRouter(routes)
 ```
