@@ -16,7 +16,7 @@
     "react-relay": "^0.0.0-experimental-a1a40b68",
     "react-scripts": "3.2.0",
     "relay-router-suspense": "file:.yalc/relay-router-suspense",
-    "relay-runtime": "^7.1.0"
+    "relay-runtime": "7.0.0"
   },
   "devDependencies": {
     "@types/node": "12.12.12",
@@ -24,9 +24,9 @@
     "@types/react-dom": "^16.9.4",
     "@types/react-relay": "^7.0.3",
     "@types/relay-runtime": "^6.0.11",
-    "babel-plugin-relay": "^7.1.0",
+    "babel-plugin-relay": "7.0.0",
     "get-graphql-schema": "^2.1.2",
-    "relay-compiler": "^7.1.0",
+    "relay-compiler": "7.0.0",
     "relay-compiler-language-typescript": "^10.1.1",
     "typescript": "3.7.2"
   },
