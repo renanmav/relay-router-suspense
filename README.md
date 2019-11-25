@@ -18,11 +18,11 @@ Used to generate the `router` based on a router config array.
 
 ```ts
 createRouter(
-    routes: RouteConfig[], 
-    options?: BrowserHistoryBuildOptions
+  routes: RouteConfig[], 
+  options?: BrowserHistoryBuildOptions
 ): {
-    cleanup: import("history").UnregisterCallback;
-    context: Router;
+  cleanup: import("history").UnregisterCallback;
+  context: Router;
 }
 ```
 
@@ -30,17 +30,17 @@ For example:
 
 ```ts
 const routes: RouteConfig[] = [
-    {
-        path: '/',
-        component: JSResource('App', () => import('./App')),
-        prepare: () => ({
-            rootQuery: preloadQuery<RootQuery>(
-                RelayEnvironment,
-                PreloadRootQuery,
-                { foo: 'bar' },
-                { fetchPolicy: 'store-or-network' },
-            ),
-        }),
-    }
+  {
+    path: '/',
+    component: JSResource('App', () => import('./App')),
+    prepare: () => ({
+      rootQuery: preloadQuery<RootQuery>(
+        RelayEnvironment,
+        PreloadRootQuery,
+        { foo: 'bar' },
+        { fetchPolicy: 'store-or-network' },
+      ),
+    }),
+  }
 ]
 ```
