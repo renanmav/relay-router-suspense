@@ -36,9 +36,9 @@ import { RouteConfig, createRouter } from 'relay-router-suspense'
 const routes: RouteConfig[] = [
   {
     path: '/',
-    component: JSResource('App', () => import('./App')),
-    prepare: () => ({
-      rootQuery: preloadQuery<RootQuery>(
+    component: JSResource('App', () => import('./App')),   // code split JS code
+    prepare: () => ({                                      // prepare function
+      rootQuery: preloadQuery<AppQuery>(
         RelayEnvironment,
         PreloadRootQuery,
         { foo: 'bar' },
