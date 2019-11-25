@@ -4,11 +4,13 @@ This is a library to smooth transition to fetch-as-you-render strategy. This imp
 
 ## Get started
 
-Install it with `yarn` or `npm`.
+Install it with `yarn` or `npm`:
 ```bash
 yarn add relay-router-suspense
 npm i relay-router-suspense
 ```
+
+Then checkout [`example`](https://github.com/renanmav/relay-router-suspense/tree/master/example) or read the [API](https://github.com/renanmav/relay-router-suspense#api)
 
 ## API
 
