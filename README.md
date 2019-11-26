@@ -4,7 +4,7 @@ This is a library to smooth transition to fetch-as-you-render strategy. This imp
 
 ## Get started
 
-Install it with `yarn` or `npm`:
+Install it with `yarn` or `npm`
 ```bash
 yarn add relay-router-suspense
 npm i relay-router-suspense
@@ -49,4 +49,28 @@ const routes: RouteConfig[] = [
 ]
 
 const router = createRouter(routes)
+```
+
+### RoutingContext
+
+Create a router store of the following form:
+
+```ts
+interface Router {
+  history: History<any>
+  get: () => Route
+  preloadCode: (pathname: string) => void
+  preload: (pathname: string) => void
+  subscribe: (callback: (arg: Route) => void) => () => void
+}
+```
+
+Use it combined with `createRouter`, for example:
+
+```ts
+const router = createRouter(routes)
+...
+<RoutingContext.Provider value={router.context}>
+  <SomeRouteComponent />
+</RoutingContext.Provider>
 ```
